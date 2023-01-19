@@ -1,9 +1,13 @@
+import { getUser } from "../../main/helpers/getUser.js";
 import { Main } from "../../main/pages/Main.jsx";
+import { getToken } from "../helpers/getToken.js";
 import './CSS/authPage.css'
 
 
 const code = new URLSearchParams(document.location.search).get('code');
-
+/* const token = getToken(code).then(); */
+const token = getToken(code)
+console.log(token)
 
 export const AuthPage = () => {
   return (
