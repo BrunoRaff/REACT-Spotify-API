@@ -1,14 +1,19 @@
-import { useState } from "react";
 
-export const getToken = (code) => {
-        let Token = '';
-        const rawResponse = fetch('http://localhost:3000/token', {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({code})
-        }).then(loqchuchasea => loqchuchasea.json()).then(x => Token = x.access_token );
-        return Token
+export const getToken = async (code) => {
+  const res = await fetch('http://localhost:3000/token', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ code })
+  });
+
+  const { access_token, refresh_token, expires_in } = res.json();
+
+  return {
+    access_token,
+    refresh_token,
+    expires_in
+  }
 }
