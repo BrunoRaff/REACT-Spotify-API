@@ -1,17 +1,15 @@
-import { useState } from 'react'
-import Header from './common/Header.jsx';
 import { AuthPage } from './auth/pages/AuthPage.jsx'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { MainPage } from './main/pages/MainPage.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
+const code = new URLSearchParams(document.location.search).get('code');
+
+export const App = () => {
 
   return (
     <>
-    <AuthPage></AuthPage>
+      {code ? <MainPage code={code} /> : <AuthPage />}
     </>
   )
 }
 
-export default App
+
