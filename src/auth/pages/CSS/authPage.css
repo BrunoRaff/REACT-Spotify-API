@@ -1,5 +1,18 @@
-a:any-link{
-    color: blanchedalmond;
-    background-color: green;
-    padding: 1em;
+.main-AuthPage{
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 10rem);
+    background-image: url('https://www.ecommercenews.pe/wp-content/uploads/2021/05/Polvos-Rosados-Lima.jpg');
+    background-size: cover;
 }
+
+a:any-link{
+    color: var(--brand-color);
+    background-color: var(--mid-color);
+    border: 2px solid var(--brand-color) ;
+    border-radius: 27px;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+}
+
+

@@ -9,6 +9,5 @@ export const getUser = async (token) => {
     }
   });
   const content = await rawResponse.json();
-
-  console.log(content);
+  return content
 }

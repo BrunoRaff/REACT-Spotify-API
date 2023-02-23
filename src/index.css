@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kanit&display=swap');
 :root {
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -13,50 +14,61 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+
+    /* COLOR */
+    --brand-color: #84CC16;
+    --dark-color: #010d18;
+    --darkest-color: #000000;
+    --mid-color: #03012C;
+    --light-color: #F5F5F5;
+    --font-color: #F5F5F5;
+
+    /* FONT */
+    --ff: 'Kanit', sans-serif;
+    --ff-headings: 'Comfortaa', cursive;
+    --fs: clamp(1rem, 2.2vh, 1.5rem);
+}
+
+/* MISC */
+.nowrap {
+    white-space: nowrap;
+}
+
+.center{
+    text-align: center;
+}
+
+/* RESET */
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+image{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 a {
     font-weight: 500;
-    color: #646cff;
+    color: var(--light-color);
     text-decoration: inherit;
 }
 
 a:hover {
-    color: #535bf2;
+    color: var(--light-color);
 }
 
 body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
     min-height: 100vh;
-}
-
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-}
-
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s;
-}
-
-button:hover {
-    border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+    background-color: var(--darkest-color);
+    scroll-behavior: smooth;
+    font-size: var(--fs);
+    font-family: var(--ff);
 }
 
 @media (prefers-color-scheme: light) {

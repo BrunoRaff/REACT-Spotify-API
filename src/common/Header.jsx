@@ -1,16 +1,10 @@
-import React from 'react'
+import './CSS/Header.css'
 
-export default function Header() {
+export const Header = () => {
   return (
     <header className="header">
-        <nav>
-            <ul>
-                <li>Sexo</li>
-                <li>Sexo</li>
-                <li>Sexo</li>
-                <li>Sexo</li>
-            </ul>
-        </nav>
+      <img src="" alt="" />
+      <h1 className='header_h1'>SEXO MAXIMO</h1>
     </header>
   )
 }
