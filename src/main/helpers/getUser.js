@@ -1,6 +1,6 @@
 
 export const getUser = async (token) => {
-  console.log(token);
+
   const rawResponse = await fetch('https://api.spotify.com/v1/me', {
     headers: {
       'Accept': 'application/json',
@@ -10,5 +10,5 @@ export const getUser = async (token) => {
   });
   const content = await rawResponse.json();
 
-  console.log(content);
+  return content;
 }
