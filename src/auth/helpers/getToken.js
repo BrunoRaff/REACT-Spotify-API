@@ -1,5 +1,6 @@
 
 export const getToken = async (code) => {
+
   const res = await fetch('http://localhost:3000/token', {
     method: 'POST',
     headers: {
