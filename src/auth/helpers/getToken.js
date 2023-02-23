@@ -1,5 +1,6 @@
 
 export const getToken = async (code) => {
+
   const res = await fetch('http://localhost:3000/token', {
     method: 'POST',
     headers: {
@@ -9,7 +10,7 @@ export const getToken = async (code) => {
     body: JSON.stringify({ code })
   });
 
-  const { access_token, refresh_token, expires_in } = res.json();
+  const { access_token, refresh_token, expires_in } = await res.json();
 
   return {
     access_token,
