@@ -1,17 +1,17 @@
 import { Card } from "./Card"
 import './CardContainer.css'
 
-export const CardContainer = ({ artists }) => {
+export const CardContainer = ({ tracks }) => {
 
     return (
         <>
-            <h2>Top Artists</h2>
+            <h2>Top Tracks</h2>
             <div className="container">
-                {artists.map(artist => (
+                {tracks.map(track => (
                     <Card
-                        key={artist.id}
-                        img={artist.images[1].url}
-                        name={artist.name} />
+                        key={track.id}
+                        img={track.album.images[1].url}
+                        name={track.name} />
                 ))}
             </div>
         </>
