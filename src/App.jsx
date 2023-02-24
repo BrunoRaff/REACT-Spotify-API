@@ -9,11 +9,11 @@ const code = new URLSearchParams(document.location.search).get('code');
 export const App = () => {
 
   return (
-    <body>
+    <div className='main-body'>
       <Header></Header>
       {code ? <MainPage code={code} /> : <AuthPage />}
       <Footer></Footer>
-    </body>
+    </div>
   )
 }
 

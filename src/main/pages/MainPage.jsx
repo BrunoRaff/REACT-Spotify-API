@@ -29,21 +29,6 @@ export const MainPage = ({ code }) => {
   useEffect(() => {
     getUserTopArtists();
   }, [token])
-
-  async function userRa(){
-   const token = await getToken(code);
-   console.log(token);
-   const userGa = await getUser(token.access_token);
-   setUser(userGa);
-  }
-
-  useEffect(() => {
-    
-    userRa();
-    
-  }, [])
-  
-
   return (
     <main>
       <CardContainer artists={artists} />

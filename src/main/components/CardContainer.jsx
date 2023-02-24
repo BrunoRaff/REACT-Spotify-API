@@ -5,7 +5,7 @@ export const CardContainer = ({ artists }) => {
 
     return (
         <>
-            <h2>Top Artists</h2>
+            <h2>Top Songs</h2>
             <div className="container">
                 {artists.map(artist => (
                     <Card
