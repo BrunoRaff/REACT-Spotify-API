@@ -8,18 +8,18 @@ import './MainPage.css'
 export const MainPage = ({ code }) => {
 
   const [token, setToken] = useState('');
-  const [artists, setArtists] = useState([]);
+  const [tracks, setTracks] = useState([]);
 
   const getAccessData = async () => {
     const { access_token } = await getToken(code);
     setToken(access_token);
   }
 
-  const getUserTopArtists = async () => {
+  const getUserTopTracks = async () => {
     if (!token) return;
-    const topArtists = await getUserTop('artists', token, 'short_term', 6);
-    const { items } = topArtists;
-    setArtists(items);
+    const topTracks = await getUserTop('tracks', token, 'short_term', 6);
+    const { items } = topTracks;
+    setTracks(items);
   }
 
   useEffect(() => {
@@ -27,11 +27,11 @@ export const MainPage = ({ code }) => {
   }, [])
 
   useEffect(() => {
-    getUserTopArtists();
+    getUserTopTracks();
   }, [token])
   return (
     <main>
-      <CardContainer artists={artists} />
+      <CardContainer tracks={tracks} />
     </main >
   )
 }
