@@ -12,6 +12,7 @@ export const App = () => {
 
   return (
     <>
+    <div className='main-body'>
       <Header></Header>
       <Routes>
         {
@@ -23,7 +24,7 @@ export const App = () => {
         <Route path="recommendation/:id" element={<Recommendation />} />
       </Routes>
       <Footer></Footer>
-    </>
+    </div>
   )
 }
 

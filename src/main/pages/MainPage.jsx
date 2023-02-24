@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { CardContainer } from "../components/CardContainer";
+import { Recommendation } from "./Recommendation";
 import { getToken } from "../../auth/helpers/getToken";
 import { getUserTop } from "../helpers/getUserTop";
 import './MainPage.css'
@@ -29,10 +30,10 @@ export const MainPage = ({ code }) => {
   useEffect(() => {
     getUserTopTracks();
   }, [token])
-
   return (
     <main>
       <CardContainer tracks={tracks} />
+      <Recommendation></Recommendation>
     </main >
   )
 }
