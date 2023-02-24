@@ -1,0 +1,56 @@
+
+.main-recommendations{
+    display: flex;
+    min-height: 160vh;
+    background-color: var(--darkest-color);
+    margin: 0;
+}
+.main-rec-container{
+    position: relative;
+    background-color: red;
+    width: 95%;
+    min-height: 150vh;
+    margin: auto;
+}
+
+.rec-container{
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    right: 0; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-info-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.main-info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 20px;
+}
+
+.ul-rec{
+    list-style: none;
+    text-align: center;
+}
+.ul-rec li{
+    display: inline-block;
+    margin-inline: 0.5rem;
+    padding: 0.5rem;
+}
+.test1{
+    width: 640px;
+    height: 640px;
+    background-color: aqua;
+    margin-right: 50px;
+    align-self: flex-end;
+}
+.test2{
+    width: 195px;
+    height: 210px;
+    background-color: blue;
+}

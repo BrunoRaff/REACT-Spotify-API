@@ -11,7 +11,6 @@ const code = new URLSearchParams(document.location.search).get('code');
 export const App = () => {
 
   return (
-    <>
     <div className='main-body'>
       <Header></Header>
       <Routes>

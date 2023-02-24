@@ -31,9 +31,8 @@ export const MainPage = ({ code }) => {
     getUserTopTracks();
   }, [token])
   return (
-    <main>
+    <main className="main-page">
       <CardContainer tracks={tracks} />
-      <Recommendation></Recommendation>
     </main >
   )
 }
