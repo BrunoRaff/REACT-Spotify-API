@@ -1,12 +1,12 @@
 import './Card.css'
+import { Link } from 'react-router-dom'
 
-export const Card = ({ img, name }) => {
+export const Card = ({ img, name, id }) => {
 
     return (
         <div className="card-container">
-            <img src={img} />
+            <Link to={`recommendation/${id}`}><img src={img} /></Link>
             <h2>{name}</h2>
-            <button>Ver mas</button>
         </div>
     )
 }

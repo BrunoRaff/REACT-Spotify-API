@@ -10,6 +10,7 @@ export const CardContainer = ({ tracks }) => {
                 {tracks.map(track => (
                     <Card
                         key={track.id}
+                        id={track.id}
                         img={track.album.images[1].url}
                         name={track.name} />
                 ))}
