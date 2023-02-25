@@ -1,6 +1,15 @@
+import { useEffect } from 'react';
+import { useParams } from 'react-router'
+import { getTrack } from '../helpers/getTrack'
+import { useTrack } from '../hooks/useTrack';
 import './Recommendation.css'
 
 export const Recommendation = () => {
+    const { id } = useParams();
+
+    const track = useTrack(id);
+    console.log(track)
+   
   return (
     <main className='main-recommendations'>
         <div className="main-rec-container">
@@ -34,7 +43,6 @@ export const Recommendation = () => {
                     </li>
                 </ul>
             </div>
-        </div>
-    </main>
-  )
+        </main>
+    )
 }
