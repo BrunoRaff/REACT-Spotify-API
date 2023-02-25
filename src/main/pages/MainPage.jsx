@@ -1,20 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
 import { CardContainer } from "../components/CardContainer";
 import { Recommendation } from "./Recommendation";
 import { getToken } from "../../auth/helpers/getToken";
 import { getUserTop } from "../helpers/getUserTop";
+import { Context } from "../context/Context";
 import './MainPage.css'
 
 export const MainPage = ({ code }) => {
 
-  const [token, setToken] = useState('');
   const [tracks, setTracks] = useState([]);
 
-  const getAccessData = async () => {
-    const { access_token } = await getToken(code);
-    setToken(access_token);
-  }
+  const { token } = useContext(Context);
 
   const getUserTopTracks = async () => {
     if (!token) return;
@@ -24,12 +21,9 @@ export const MainPage = ({ code }) => {
   }
 
   useEffect(() => {
-    getAccessData();
-  }, [])
-
-  useEffect(() => {
     getUserTopTracks();
   }, [token])
+
   return (
     <main className="main-page">
       <CardContainer tracks={tracks} />
