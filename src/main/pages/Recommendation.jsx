@@ -43,6 +43,7 @@ export const Recommendation = () => {
                     </li>
                 </ul>
             </div>
-        </main>
+        </div>
+    </main>
     )
 }
